@@ -4,13 +4,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="二叉树, Small &amp; Smart">
-    <meta name="description" content="结构体写法：数据域和左右指针
-二叉树的种类1.空的二叉树 ：只有结构体指针
-2.只有根节点的二叉树
-3.只有左子树或者右子树的二叉树
-4.左右节点都存在
-​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节">
+    <meta name="keywords" content="数据结构, Small &amp; Smart">
+    <meta name="description" content="
+数据架构的存储方式：数组（顺序存储）和链表（链式存储）
+
+其他数据结构都是在二者上的特殊操作，如队列和栈既可以用链表也可以用数组来实现
+
+数据结构的操作方式：增删改查（遍历加访问）
+
+线性：for/while
+非线性：递归
+栗子：
+123">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +27,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二叉树 | Emma`s blog</title>
+    <title>数据结构 | Emma`s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -324,12 +329,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二叉树</h1>
+                    <h1 class="description center-align post-title">数据结构</h1>
                 </div>
             </div>
         </div>
@@ -445,8 +450,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">算法笔记</span>
                             </a>
                         
                     </div>
@@ -461,14 +466,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-11-08
+                    2021-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2021-11-08
+                    2021-11-09
                 </div>
                 
 
@@ -487,16 +492,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>结构体写法：数据域和左右指针</p>
-<h3 id="二叉树的种类"><a href="#二叉树的种类" class="headerlink" title="二叉树的种类"></a>二叉树的种类</h3><p>1.空的二叉树 ：只有结构体指针</p>
-<p>2.只有根节点的二叉树</p>
-<p>3.只有左子树或者右子树的二叉树</p>
-<p>4.左右节点都存在</p>
-<p>​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节点序号，编号连续）</p>
-<p>​        4.2 满二叉树</p>
-<h3 id="二叉树的遍历（看根节点的位置）"><a href="#二叉树的遍历（看根节点的位置）" class="headerlink" title="二叉树的遍历（看根节点的位置）"></a>二叉树的遍历（看根节点的位置）</h3><p>前序遍历：根左右</p>
-<p>中序遍历：左根右</p>
-<p>后序遍历：左右根</p>
+                <ol>
+<li>数据架构的存储方式：<strong>数组</strong>（顺序存储）和<strong>链表</strong>（链式存储）</li>
+</ol>
+<p>其他数据结构都是在二者上的特殊操作，如队列和栈既可以用链表也可以用数组来实现</p>
+<ol start="2">
+<li>数据结构的操作方式：增删改查（遍历加访问）</li>
+</ol>
+<p>线性：for/while</p>
+<p>非线性：递归</p>
+<p>栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(ListNode p=head;p!=<span class="keyword">null</span>;p=p.next)&#123;</span><br><span class="line"><span class="comment">//迭代访问 p.val</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">    <span class="comment">//递归访问 head.val</span></span><br><span class="line">    traverse(head.next)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>二叉树遍历框架</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*基本二叉树节点*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> val;</span><br><span class="line">TreeNode[] children;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(TreeNode child:root.children)</span><br><span class="line">        traverse(child)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>刷题先刷二叉树–&gt;套路–&gt;回溯动规和分治都是在遍历一棵树</strong></p>
 
                 
             </div>
@@ -523,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xzhEmma.github.io/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/">https://xzhEmma.github.io/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
+                    <a href="https://xzhEmma.github.io/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">https://xzhEmma.github.io/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,8 +572,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">算法笔记</span>
                                 </a>
                             
                         </div>
@@ -738,13 +749,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <a href="/2021/11/09/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E4%B9%8B%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="数据结构">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="动态规划">
                         
-                        <span class="card-title">数据结构</span>
+                        <span class="card-title">动态规划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -783,13 +794,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/07/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
+                <a href="/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="二叉树">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -800,7 +811,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
                             </span>
                         <span class="publish-author">
                             
@@ -809,6 +820,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
                 </div>
                 
             </div>
