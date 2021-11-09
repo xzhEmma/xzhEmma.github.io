@@ -15,7 +15,7 @@
 线性：for/while
 非线性：递归
 栗子：
-123">
+cla">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -489,6 +489,11 @@
         
 
         
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -502,10 +507,10 @@
 <p>线性：for/while</p>
 <p>非线性：递归</p>
 <p>栗子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(ListNode p=head;p!=<span class="keyword">null</span>;p=p.next)&#123;</span><br><span class="line"><span class="comment">//迭代访问 p.val</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">    <span class="comment">//递归访问 head.val</span></span><br><span class="line">    traverse(head.next)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(ListNode p=head;p!=<span class="keyword">null</span>;p=p.next)&#123;</span><br><span class="line"><span class="comment">//迭代访问 p.val</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">    <span class="comment">//递归访问 head.val</span></span><br><span class="line">    traverse(head.next)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>二叉树遍历框架</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*基本二叉树节点*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> val;</span><br><span class="line">TreeNode[] children;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(TreeNode child:root.children)</span><br><span class="line">        traverse(child)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*基本二叉树节点*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> val;</span><br><span class="line">TreeNode[] children;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(TreeNode child:root.children)</span><br><span class="line">        traverse(child)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>刷题先刷二叉树–&gt;套路–&gt;回溯动规和分治都是在遍历一棵树</strong></p>
 
