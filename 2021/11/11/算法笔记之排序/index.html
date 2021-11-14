@@ -4,13 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="二叉树, Small &amp; Smart">
-    <meta name="description" content="结构体写法：数据域和左右指针
-二叉树的种类1.空的二叉树 ：只有结构体指针
-2.只有根节点的二叉树
-3.只有左子树或者右子树的二叉树
-4.左右节点都存在
-​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节">
+    <meta name="keywords" content="算法笔记之排序, Small &amp; Smart">
+    <meta name="description" content="
+冒泡排序：比较相邻数大的去后面
+对于原本有序的数组进行优化
+
+
+选择排序：找最大值扔最后
+堆排序：找最大值一步用“堆”
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二叉树 | Emma`s blog</title>
+    <title>算法笔记之排序 | Emma`s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -324,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二叉树</h1>
+                    <h1 class="description center-align post-title">算法笔记之排序</h1>
                 </div>
             </div>
         </div>
@@ -445,8 +448,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">算法笔记</span>
                             </a>
                         
                     </div>
@@ -461,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-11-08
+                    2021-11-11
                 </div>
                 
 
@@ -495,41 +498,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>结构体写法：数据域和左右指针</p>
-<h3 id="二叉树的种类"><a href="#二叉树的种类" class="headerlink" title="二叉树的种类"></a>二叉树的种类</h3><p>1.空的二叉树 ：只有结构体指针</p>
-<p>2.只有根节点的二叉树</p>
-<p>3.只有左子树或者右子树的二叉树</p>
-<p>4.左右节点都存在</p>
-<p>​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节点序号，编号连续）</p>
-<p>​        4.2 满二叉树</p>
-<h3 id="二叉树的遍历（看根节点的位置）"><a href="#二叉树的遍历（看根节点的位置）" class="headerlink" title="二叉树的遍历（看根节点的位置）"></a>二叉树的遍历（看根节点的位置）</h3><h4 id="递归方式"><a href="#递归方式" class="headerlink" title="递归方式"></a>递归方式</h4><ul>
-<li><p>前序遍历：根左右</p>
-</li>
-<li><p>中序遍历：左根右</p>
-</li>
-<li><p>后序遍历：左右根</p>
-</li>
+                <ol>
+<li>冒泡排序：比较相邻数大的去后面<ul>
+<li>对于原本有序的数组进行优化</li>
 </ul>
-<h4 id="迭代方式"><a href="#迭代方式" class="headerlink" title="迭代方式"></a>迭代方式</h4><ul>
-<li>层级遍历</li>
-</ul>
-<h4 id="代码框架"><a href="#代码框架" class="headerlink" title="代码框架"></a>代码框架</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">traverse</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token comment">//前序遍历的代码</span>
-    <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">traverse</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//后序遍历的代码</span>
-
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+</li>
+<li>选择排序：找最大值扔最后</li>
+<li>堆排序：找最大值一步用“堆”</li>
+</ol>
 
                 
             </div>
@@ -556,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xzhEmma.github.io/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/">https://xzhEmma.github.io/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
+                    <a href="https://xzhEmma.github.io/2021/11/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%8E%92%E5%BA%8F/">https://xzhEmma.github.io/2021/11/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%8E%92%E5%BA%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -594,8 +570,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">算法笔记</span>
                                 </a>
                             
                         </div>
@@ -767,17 +743,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                <a href="/2021/11/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%8E%92%E5%BA%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="数据结构">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="算法笔记之排序">
                         
-                        <span class="card-title">数据结构</span>
+                        <span class="card-title">算法笔记之排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -787,9 +764,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -798,6 +775,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -816,13 +794,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/07/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
+                <a href="/2021/11/10/java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="java程序的基本结构">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">java程序的基本结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -833,7 +811,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-10
                             </span>
                         <span class="publish-author">
                             
