@@ -589,6 +589,33 @@ mjx-container[display="true"] + br {
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://w.wallhaven.cc/full/md/wallhaven-mdlmjm.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">数据结构</div>
+                            <div class="description center-align">
+                                
+                                    优先队列：优先级最高的先出
+实现方法无序数组：入队：放在数组末尾 O(1)
+​                    出队：找最大值，挪动后半部分 O(n)
+有序数组：入队：插到合适的位置，必要时挪动数组的后半部分 O(n)
+​      
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('/medias/featureimages/9.jpg');">
                 <div class="container">
                     <div class="row">
@@ -753,41 +780,6 @@ def minDistance(s1, s2)-&gt;int:
 
 
 
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;Recommended Posts</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        
-             <div class="post-card" style="background-image: url('/source/images/xxx.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Markdown/" class="category">Markdown</a>
-                        
-                    
-                </div>
-                <a href="/2018/09/07/hello-world/">
-                    <h3 class="post-title">typora-vue-theme主题介绍</h3>
-                </a>
-                <p class="post-description">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p>
-                <a href="/2018/09/07/hello-world/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
-
-
                     </div>
                     
                 </div>
@@ -801,6 +793,59 @@ def minDistance(s1, s2)-&gt;int:
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/11/16/tips/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="tips">
+                            
+                            <span class="card-title">tips</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+二进制–位运算 x&amp;（x-1）把x最后一位变成0 
+
+
+奇数的二进制/2取整少个1；偶数的二进制/2 1不变
+
+​                1101–》 110        1110–》111
+
+s右移一位：s&gt;&g
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                EmmaXv
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+                            <span class="chip bg-color">算法笔记</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -1009,8 +1054,7 @@ def minDistance(s1, s2)-&gt;int:
                     <a href="/2021/11/09/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                         <div class="card-image">
                             
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构">
+                            <img src="https://w.wallhaven.cc/full/md/wallhaven-mdlmjm.jpg" class="responsive-img" alt="数据结构">
                             
                             <span class="card-title">数据结构</span>
                         </div>
@@ -1019,17 +1063,11 @@ def minDistance(s1, s2)-&gt;int:
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-数据架构的存储方式：数组（顺序存储）和链表（链式存储）
-
-其他数据结构都是在二者上的特殊操作，如队列和栈既可以用链表也可以用数组来实现
-
-数据结构的操作方式：增删改查（遍历加访问）
-
-线性：for/while
-非线性：递归
-栗子：
-cla
+                                优先队列：优先级最高的先出
+实现方法无序数组：入队：放在数组末尾 O(1)
+​                    出队：找最大值，挪动后半部分 O(n)
+有序数组：入队：插到合适的位置，必要时挪动数组的后半部分 O(n)
+​      
                             
                         </div>
                         <div class="publish-info">
@@ -1438,11 +1476,21 @@ $(function () {
 </script>
 
     <!-- 回到顶部按钮 -->
+
+
+
+
+
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
+
+
+```
+
+```
 
 
     <script src="/libs/materialize/materialize.min.js"></script>
