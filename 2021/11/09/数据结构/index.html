@@ -435,7 +435,7 @@ mjx-container[display="true"] + br {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://w.wallhaven.cc/full/md/wallhaven-mdlmjm.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/xzhEmma/xzhEmma.github.io/picbed/mediaswallhaven-mdlmjm_1920x1080.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -612,7 +612,10 @@ mjx-container[display="true"] + br {
 <p><strong>有序数组</strong>：入队：插到合适的位置，必要时挪动数组的后半部分 O(n)</p>
 <p>​                    出队：删除数组最末尾元素 O(1)</p>
 <p><strong>二叉堆</strong>：完全二叉树，父节点大于子节点</p>
-<p>上浮：不符合规则的点与其父节点交换，直到符合规则为止</p>
+<p>​                <strong>上浮</strong>：不符合规则的点与其父节点交换，直到符合规则为止 O(logn)</p>
+<p>​                <strong>下沉</strong>：不符合规则的点，与子节点中较大的交换，直到符合规则为止 O(logn)</p>
+<p>​                入队：待插入元素在最后–&gt;上浮</p>
+<p>​                出队：根出去，最后一个节点换到根–&gt;下沉</p>
 <ol>
 <li>数据架构的存储方式：<strong>数组</strong>（顺序存储）和<strong>链表</strong>（链式存储）</li>
 </ol>
