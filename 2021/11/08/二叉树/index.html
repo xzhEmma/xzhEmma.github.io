@@ -468,7 +468,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2021-11-11
+                    2022-01-29
                 </div>
                 
 
@@ -502,7 +502,20 @@
 <p>4.左右节点都存在</p>
 <p>​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节点序号，编号连续）</p>
 <p>​        4.2 满二叉树</p>
-<h3 id="二叉树的遍历（看根节点的位置）"><a href="#二叉树的遍历（看根节点的位置）" class="headerlink" title="二叉树的遍历（看根节点的位置）"></a>二叉树的遍历（看根节点的位置）</h3><h4 id="递归方式"><a href="#递归方式" class="headerlink" title="递归方式"></a>递归方式</h4><ul>
+<p>​        4.3 二叉搜索树（搜索复杂度logn）</p>
+<p>​        4.4 平衡二叉搜索树 （<u>左子树</u>和<u>右子树</u>高度绝对值不大于1）map,set,multmap,maltset <font color=red>常见容器的底层结构</font></p>
+<h4 id="定义一个二叉树"><a href="#定义一个二叉树" class="headerlink" title="定义一个二叉树"></a>定义一个二叉树</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span>definition <span class="token keyword">for</span> a binary tree node<span class="token punctuation">.</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+    def_init_<span class="token punctuation">(</span>self<span class="token punctuation">,</span>val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>left<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>right<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> left
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> right
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二叉树的遍历（看根节点的位置）递归-迭代"><a href="#二叉树的遍历（看根节点的位置）递归-迭代" class="headerlink" title="二叉树的遍历（看根节点的位置）递归+迭代"></a>二叉树的遍历（看根节点的位置）递归+迭代</h3><h4 id="深度优先（栈）"><a href="#深度优先（栈）" class="headerlink" title="深度优先（栈）"></a>深度优先（栈）</h4><ul>
 <li><p>前序遍历：根左右</p>
 </li>
 <li><p>中序遍历：左根右</p>
@@ -510,12 +523,12 @@
 <li><p>后序遍历：左右根</p>
 </li>
 </ul>
-<h4 id="迭代方式"><a href="#迭代方式" class="headerlink" title="迭代方式"></a>迭代方式</h4><ul>
+<h4 id="广度优先（队列）"><a href="#广度优先（队列）" class="headerlink" title="广度优先（队列）"></a>广度优先（队列）</h4><ul>
 <li>层级遍历</li>
 </ul>
-<h4 id="代码框架"><a href="#代码框架" class="headerlink" title="代码框架"></a>代码框架</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">traverse</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token comment">//前序遍历的代码</span>
+<h4 id="递归代码框架"><a href="#递归代码框架" class="headerlink" title="递归代码框架"></a>递归代码框架</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">traverse</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>	<span class="token comment">//确定参数和返回值</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>	<span class="token comment">//确定终止条件</span>
+    <span class="token comment">//单层逻辑，前序</span>
     <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">traverse</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -529,6 +542,42 @@
     <span class="token comment">//后序遍历的代码</span>
 
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="迭代代码框架"><a href="#迭代代码框架" class="headerlink" title="迭代代码框架"></a>迭代代码框架</h4><img src="E:\hexo-blog\微信图片_20220129171037.jpg" alt="微信图片_20220129171037" style="zoom:20%;" />
+
+
+
+<p>前序遍历：5（421）（6）</p>
+<img align="left" src="E:\hexo-blog\二叉树-2.jpg" alt="二叉树-2" style="zoom:20%;" />
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">Traversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>!stack<span class="token punctuation">.</span>isEmpty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">|</span><span class="token operator">|</span>root<span class="token operator">!=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token operator">==</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">continue</span>
+        cur <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+        stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+        stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> res<span class="token operator">//</span>跟左右，调换左右<span class="token operator">-</span>》根右左  逆序<span class="token operator">-</span>》左右根<span class="token punctuation">(</span>后序<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">inorderTraversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span> 
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    cur <span class="token operator">=</span> root
+    <span class="token keyword">while</span><span class="token punctuation">(</span>stack<span class="token operator">!=</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token keyword">or</span> cur<span class="token operator">!=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        
+        <span class="token keyword">if</span><span class="token punctuation">(</span>cur<span class="token operator">!=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+            stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">)</span>
+            cur <span class="token operator">=</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>left
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                cur <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+                cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>right
+    <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1071,7 +1120,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">EmmaXv</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

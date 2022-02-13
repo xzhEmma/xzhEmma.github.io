@@ -683,10 +683,9 @@ s右移一位：s&gt;&g
                             <div class="description center-align">
                                 
                                     优先队列：优先级最高的先出
-实现方法无序数组：入队：放在数组末尾 O(1)
+实现方法数组：存放在连续内存空间上的相同类型数据的集合无序数组：入队：放在数组末尾 O(1)
 &ensp;&ensp;&ensp;出队：找最大值，挪动后半部分 O(n)
-有序数组：入队：插到合适的位置，必要时挪动数组的后半部分 O(n)
-&ensp;&ens
+有序数组：入队：插到合适的位置，必要时挪动
                                 
                             </div>
                             <div class="cover-btns">
@@ -801,12 +800,41 @@ def minDistance(s1, s2)-&gt;int:
 
 选择排序：找最大值扔最后
 堆排序：找最大值一步用“堆”
+归并排序：合并两个有序数组
 
 
                                 
                             </div>
                             <div class="cover-btns">
                                 <a href="/2021/11/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%8E%92%E5%BA%8F/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/9.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">深度优先搜索-广度优先搜索</div>
+                            <div class="description center-align">
+                                
+                                    DFS（深度优先搜索）和 BFS（广度优先搜索）
+void dfs(TreeNode root) &#123;
+    if (root == null) &#123;
+        return;
+    &#125;
+    dfs(
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/11/27/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>Read more
                                 </a>
@@ -908,6 +936,185 @@ def minDistance(s1, s2)-&gt;int:
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/02/13/%E6%A2%AF%E5%BA%A6%E7%AF%87/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="梯度篇">
+                            
+                            <span class="card-title">梯度篇</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                EmmaXv
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/02/13/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%AF%87/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="激活函数篇">
+                            
+                            <span class="card-title">激活函数篇</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                sigmoid 会饱和，造成梯度消失 –》ReLU
+ReLU 负半轴是死区，梯度为0 –》LeakyReLU, PReLU
+强调梯度和权值分布的稳定性 –》ELU, 以及较新的SELU
+网络结构太深，梯度无法传播 –》highway
+干脆不
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                EmmaXv
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/02/13/%E5%BD%92%E4%B8%80%E5%8C%96%E5%92%8C%E6%A0%87%E6%B3%A8%E5%8C%96/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="归一化和标注化">
+                            
+                            <span class="card-title">归一化和标注化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+
+
+对比
+归一化
+标准化
+
+
+
+概念
+将数值规约到（0,1）或者是（-1,1）区间
+将数据的分布规约在均值为0，标准差为1的分布上（近似高斯分布）
+
+
+侧重点
+数值的归一，丢失数据分布信息，丢失数据间距离信息，保留了权值
+数据分布的归一，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                EmmaXv
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/11/27/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="深度优先搜索-广度优先搜索">
+                            
+                            <span class="card-title">深度优先搜索-广度优先搜索</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                DFS（深度优先搜索）和 BFS（广度优先搜索）
+void dfs(TreeNode root) &#123;
+    if (root == null) &#123;
+        return;
+    &#125;
+    dfs(
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                EmmaXv
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                            <span class="chip bg-color">数据结构</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -1073,6 +1280,7 @@ s右移一位：s&gt;&g
 
 选择排序：找最大值扔最后
 堆排序：找最大值一步用“堆”
+归并排序：合并两个有序数组
 
 
                             
@@ -1267,10 +1475,9 @@ def minDistance(s1, s2)-&gt;int:
                         <div class="summary block-with-text">
                             
                                 优先队列：优先级最高的先出
-实现方法无序数组：入队：放在数组末尾 O(1)
+实现方法数组：存放在连续内存空间上的相同类型数据的集合无序数组：入队：放在数组末尾 O(1)
 &ensp;&ensp;&ensp;出队：找最大值，挪动后半部分 O(n)
-有序数组：入队：插到合适的位置，必要时挪动数组的后半部分 O(n)
-&ensp;&ens
+有序数组：入队：插到合适的位置，必要时挪动
                             
                         </div>
                         <div class="publish-info">
@@ -1291,197 +1498,6 @@ def minDistance(s1, s2)-&gt;int:
                         
                         <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
                             <span class="chip bg-color">算法笔记</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/11/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%AB%E8%82%A1%E6%96%87/">
-                        <div class="card-image">
-                            
-                            <img src="https://raw.githubusercontent.com/xzhEmma/xzhEmma.github.io/picbed/medias4.jpg" class="responsive-img" alt="机器学习八股文">
-                            
-                            <span class="card-title">机器学习八股文</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-定义：
-机器学习算法是揭示数据中潜在关系的过程。
-机器学习模型是机器学习算法产出的结果，可以将其看做是在给定输入情况下，输出一定结果的函数F。
-
-根据是否有真值 – 有监督，无监督，半监督
-有监督：在一个有监督的学习任务中，数据样本将包含
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                EmmaXv
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
-                            <span class="chip bg-color">算法笔记</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/11/08/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="二叉树">
-                            
-                            <span class="card-title">二叉树</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                结构体写法：数据域和左右指针
-二叉树的种类1.空的二叉树 ：只有结构体指针
-2.只有根节点的二叉树
-3.只有左子树或者右子树的二叉树
-4.左右节点都存在
-​        4.1 完全二叉树（编号从1开始–为了让孩子节点的序号除于二等于父节
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                EmmaXv
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                            <span class="chip bg-color">数据结构</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/11/07/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                下载nodejs
-用npm安装hexo 如果报错检查npm和node版本是否匹配
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                EmmaXv
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/09/07/hello-world/">
-                        <div class="card-image">
-                            
-                            <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
-                            
-                            <span class="card-title">typora-vue-theme主题介绍</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Typora/">
-                            <span class="chip bg-color">Typora</span>
-                        </a>
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
                         </a>
                         
                     </div>
@@ -1494,6 +1510,30 @@ def minDistance(s1, s2)-&gt;int:
     </article>
 
 </main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a class="left btn-floating btn-large disabled">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">1 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/2/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
 
 
 
@@ -1560,7 +1600,7 @@ def minDistance(s1, s2)-&gt;int:
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <a href="/about" target="_blank">EmmaXv</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
