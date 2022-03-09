@@ -4,8 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="梯度篇, Small &amp; Smart">
-    <meta name="description" content="梯度篇 | Emma`s blog">
+    <meta name="keywords" content="聚类算法, Small &amp; Smart">
+    <meta name="description" content="1. K-Means(K均值)聚类
+随机初始化中心点（已知中心点个数）
+计算数据点到中心点的距离并归类
+计算新的类中心点
+重复直到每次迭代后中心点变化不大
+
+应多次随机初始化取效果最好
+K-Medians
+用中位数代替均值  避免异常点的影">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>梯度篇 | Emma`s blog</title>
+    <title>聚类算法 | Emma`s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -319,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">梯度篇</h1>
+                    <h1 class="description center-align post-title">聚类算法</h1>
                 </div>
             </div>
         </div>
@@ -438,9 +446,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Machine-Learning/">
+                                <span class="chip bg-color">Machine Learning</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -452,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-02-13
+                    2022-03-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-02-13
+                    2022-03-09
                 </div>
                 
 
@@ -486,7 +498,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="1-K-Means-K均值-聚类"><a href="#1-K-Means-K均值-聚类" class="headerlink" title="1. K-Means(K均值)聚类"></a>1. K-Means(K均值)聚类</h4><ol>
+<li>随机初始化中心点（已知中心点个数）</li>
+<li>计算数据点到中心点的距离并归类</li>
+<li>计算新的类中心点</li>
+<li>重复直到每次迭代后中心点变化不大</li>
+</ol>
+<p>应多次随机初始化取效果最好</p>
+<p>K-Medians</p>
+<p>用中位数代替均值  避免异常点的影响但是排序使得计算更加复杂</p>
+<h4 id="2-均值漂移聚类"><a href="#2-均值漂移聚类" class="headerlink" title="2. 均值漂移聚类"></a>2. 均值漂移聚类</h4><ol>
+<li>确定滑动窗口半径r，随机选取中心点C半径为r的圆形滑动窗口开始滑动。</li>
+<li>计算滑动窗口内的均值来作为中心点，滑动窗口内的点的数量为窗口内的密度。</li>
+<li>每次窗口向密度更高的区域移动。一直移动到圆内密度不再增加为止。</li>
+<li>当多个滑动窗口重叠时，保留包含最多点的窗口，然后根据数据点所在的滑动窗口进行聚类。</li>
+</ol>
+<h4 id="3-基于密度的聚类方法-DBSCAN"><a href="#3-基于密度的聚类方法-DBSCAN" class="headerlink" title="3. 基于密度的聚类方法(DBSCAN)"></a>3. 基于密度的聚类方法(DBSCAN)</h4><p>与均值漂移聚类类似，DBSCAN也是基于密度的聚类算法。</p>
+<ol>
+<li><p>确定半径r和minPoints. </p>
+</li>
+<li><p>以没有被访问过的任意数据点为中心，r为半径画圆，圆内包含的点的数量如果大于或等于minPoints则改点被标记为central point，反之则会被标记为noise point。</p>
+</li>
+<li><p>如果一个noise point存在于某个central point为半径的圆内，则这个点被标记为边缘点，反之仍为noise point。</p>
+</li>
+<li><p>重复步骤1，知道所有的点都被访问过。</p>
+</li>
+</ol>
+<h4 id="4-用高斯混合模型（GMM）的最大期望（EM）聚类（类似K-Means）"><a href="#4-用高斯混合模型（GMM）的最大期望（EM）聚类（类似K-Means）" class="headerlink" title="4. 用高斯混合模型（GMM）的最大期望（EM）聚类（类似K-Means）"></a>4. 用高斯混合模型（GMM）的最大期望（EM）聚类（类似K-Means）</h4><ol>
+<li>随机初始化每个簇的高斯分布参数（均值和方差）（已知中心点个数）。</li>
+<li>给定每个簇的高斯分布，计算每个数据点属于每个簇的概率。</li>
+<li> 基于这些概率我们计算高斯分布参数使得数据点的概率最大化，可以使用数据点概率的加权来计算这些新的参数，权重就是数据点属于该簇的概率。</li>
+<li>重复迭代2和3直到在迭代中的变化不大。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">K-Means(K均值)聚类</td>
+<td>速度快，计算简便</td>
+<td>须提前知道数据有几组</td>
+</tr>
+<tr>
+<td align="left">均值漂移聚类</td>
+<td>均值漂移<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95&spm=1001.2101.3001.7020">聚类算法</a>不需要我们知道有多少类/组。<br/>相比于K-Means受均值影响较小。</td>
+<td>窗口半径r的选择可能是不重要的</td>
+</tr>
+<tr>
+<td align="left">基于密度的聚类方法(DBSCAN)</td>
+<td>不需要知道簇的数量</td>
+<td>需要确定距离r和minPoints</td>
+</tr>
+<tr>
+<td align="left">用高斯混合模型（GMM）的最大期望（EM）聚类</td>
+<td>GMMs使用均值和标准差，簇可以呈现出椭圆形而不是仅仅限制于圆形。K-Means是GMMs的一个特殊情况，是方差在所有维度上都接近于0时簇就会呈现出圆形。<br/>GMMs是使用概率，所有一个数据点可以属于多个簇。例如数据点X可以有百分之20的概率属于A簇，百分之80的概率属于B簇。也就是说GMMs可以支持混合资格。</td>
+<td></td>
+</tr>
+</tbody></table>
+
                 
             </div>
             <hr/>
@@ -512,7 +585,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xzhEmma.github.io/2022/02/13/%E6%A2%AF%E5%BA%A6%E7%AF%87/">https://xzhEmma.github.io/2022/02/13/%E6%A2%AF%E5%BA%A6%E7%AF%87/</a>
+                    <a href="https://xzhEmma.github.io/2022/03/01/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">https://xzhEmma.github.io/2022/03/01/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,7 +622,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Machine-Learning/">
+                                    <span class="chip bg-color">Machine Learning</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -723,7 +800,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/03/01/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">
+                <a href="/2022/03/09/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95-1/">
                     <div class="card-image">
                         
                         
@@ -740,7 +817,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
                         </span>
                         <span class="publish-author">
                             
@@ -749,14 +826,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Machine-Learning/">
-                        <span class="chip bg-color">Machine Learning</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -768,13 +837,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/13/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E7%AF%87/">
+                <a href="/2022/02/13/%E6%A2%AF%E5%BA%A6%E7%AF%87/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="激活函数篇">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="梯度篇">
                         
-                        <span class="card-title">激活函数篇</span>
+                        <span class="card-title">梯度篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
